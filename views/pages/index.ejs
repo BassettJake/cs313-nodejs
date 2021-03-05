@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+  <h1>Postage Calculator</h1>
+  <form id="postageForm" action="/calcPostage" method="post">
+    <input type="number" step="0.01" id="weight" name="weight" placeholder="Weight in lb">
+    <select id="parcel" name="parcel">
+      <option id="parcel_0">Letters (Stamped)</option>
+      <option id="parcel_1">Letters (Metered)</option>
+      <option id="parcel_2">Large Envelopes (Flats)</option>
+      <option id="parcel_3">First-Class Package Service—Retail</option>
+    </select>
+    <input id="submitButton" type="submit" name="submit" value="Submit">
+  </form>
+
+  <section id="cost">Total Cost: $<%=result%></section>
+
+</main>
+
+</body>
+
+<style>
+
+main{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(12px + 1vw);
+}
+
+h1{
+  font-size: calc(20px + 1vw);
+  font-weight: bold;
+}
+
+#postageForm{
+  display: grid;
+}
+
+#postageForm input, #postageForm select, select option{
+  font-size: calc(12px + 1vw);
+  padding: calc(5px + .5vw);
+  margin: calc(10px + .5vw);
+}
+
+#submitButton{
+  font-weight: bold;
+}
+
+h1, #cost{
+  text-align: center;
+}
+
+#cost{
+  font-size: calc(30px + 1vw);
+}
+
+</style>
+
+</html>
