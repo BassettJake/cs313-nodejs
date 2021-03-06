@@ -98,7 +98,7 @@ app.post('/calcPostage', (req, res) => {
   }
 
   params = {
-    result: calc
+    result: "Total Cost: $" + calc
   }
   res.render('pages/index', params);
   res.end();
